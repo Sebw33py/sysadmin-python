@@ -1,0 +1,25 @@
+# SQL ORM
+peewee==3.14.4
+
+# HTTP requests wrapper
+urllib3==1.26.7
+idna==3.2
+requests==2.26.0
+
+# Remote system commands
+pycparser==2.20
+six==1.16.0
+cffi==1.14.6
+pynacl==1.4.0
+cryptography==3.4.8
+bcrypt==3.2.0
+invoke==1.6.0
+pathlib2==2.3.6
+paramiko==2.7.2
+fabric==2.6.0
+
+# Pandas
+penpyxl==3.0.9
+et-xmlfile==1.1.0
+numpy==1.17.3
+pandas==1.3.3
