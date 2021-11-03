@@ -2,11 +2,11 @@ from fabric import Connection, SerialGroup
 
 
 def run_hostname(host: list):
-# Connect to several hosts
-result = SerialGroup("host2", "host1").run("hostname")
-print(result)
-result = ThreadingGroup("host2", "host1").run("hostname")
-print(result)
+    # Connect to several hosts
+    result = SerialGroup("host2", "host1").run("hostname")
+    print(result)
+    result = ThreadingGroup("host2", "host1").run("hostname")
+    print(result)
 
 def main():
     host = "localhost"
