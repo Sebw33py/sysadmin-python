@@ -1,7 +1,7 @@
 from subprocess import (
     run,
     PIPE,
-    DEVNULL,
+    STDOUT,
     Popen,
     TimeoutExpired,
     CalledProcessError,
@@ -41,10 +41,10 @@ subprocess.Popen
 def call_Popen(cmd):
     output, ret = None, None
     try:
-        rt_proc = subprocess.Popen(
+        rt_proc = Popen(
             cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT
+            stdout=PIPE,
+            stderr=STDOUT
         )
         output, ret = rt_proc.communicate()
     except Exception as e:

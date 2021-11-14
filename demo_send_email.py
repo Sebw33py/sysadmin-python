@@ -1,4 +1,4 @@
-import smtplib, ssl, argparse, re
+import smtplib, ssl, argparse, re, pathlib, os
 from email.message import EmailMessage
 
 
@@ -35,16 +35,20 @@ def parse_args() -> argparse.Namespace:
     return args
 
 def main():
+    root_file = pathlib.Path(__file__).parent.resolve()
     args = parse_args()
     port = 465  # For SSL
-    email = read_email_content(EmailMessage(), "./statics/email_content.txt")
+    email = read_email_content(
+        EmailMessage(),
+        os.path.join(root_file, "statics", "email_content.txt")
+    )
     email["Subject"] = "Test email : Formation sysAdmin"
     email["From"] = args.email
     email["To"] = args.receiver
 
     context = ssl._create_unverified_context()
 
-    try
+    try:
         with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             server.login(args.email, args.pwd)
             # server.sendemail() is also available if you don't use EmailMessage class

@@ -13,7 +13,7 @@ def main():
     )
     parser.add_argument("--version",action="version", version="%(prog)s 1.0.1")
     # Positionnal argument
-    parser.add_argument("text", type=str, help="Texte à afficher")
+    # parser.add_argument("text", type=str, help="Texte à afficher")
     parser.add_argument(
         "integer", metavar="N",
         type=int, nargs="+",

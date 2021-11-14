@@ -1,4 +1,4 @@
-import os, pandas
+import os, pandas, pathlib
 from pandas.core.frame import DataFrame
 
 
@@ -18,7 +18,10 @@ def read_data_file(path: str) -> DataFrame:
     return data
 
 def main():
-    data = read_data_file("./statics/excel_file.csv")
+    root_file = pathlib.Path(__file__).parent.resolve()
+    data = read_data_file(
+        os.path.join(root_file, "statics", "excel_file.csv")
+    )
     print("--- Your data file ---")
     print(f"Data types:\n{data.dtypes}\n")
     print(f"File's info:\n{data.info()}\n")
@@ -35,7 +38,9 @@ def main():
     data["clientid"] = temp_df["clientid"]
 
     # Write an Excel file with the updated values
-    data.to_excel("./demo_excel.xlsx")
+    data.to_excel(
+        os.path.join(root_file, "demo_excel.xlsx")
+    )
 
 if __name__ == "__main__":
     main()
