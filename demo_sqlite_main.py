@@ -22,7 +22,6 @@ def main():
         professor=prof_id,
         creation_date=datetime.now()
     )
-    course_id = course.save()
     # Creating two Students
     student1 = Student.create(
         first_name="DD",
