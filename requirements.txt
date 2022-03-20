@@ -20,7 +20,7 @@ fabric==2.6.0
 # Pandas
 et-xmlfile==1.1.0
 numpy
-pandas==1.3.3
+pandas==1.4.1
 openpyxl
 
 # iCrawler
