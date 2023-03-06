@@ -7,9 +7,9 @@ idna==3.2
 requests==2.26.0
 
 # Remote system commands
+cffi==1.15.1
 pycparser==2.20
 six==1.16.0
-cffi==1.14.6
 pynacl==1.4.0
 bcrypt==3.2.0
 invoke==1.6.0
@@ -18,10 +18,8 @@ paramiko==2.7.2
 fabric==2.6.0
 
 # Pandas
-et-xmlfile==1.1.0
-numpy
-pandas==1.4.1
-openpyxl
+numpy==1.24.2
+pandas==1.5.3
 
 # iCrawler
 Pillow==8.3.2
@@ -35,6 +33,7 @@ soupsieve==2.2.1
 urllib3==1.26.7
 
 # Scrapy
+<<<<<<< HEAD
 Automat==20.2.0
 PyDispatcher==2.0.5
 Twisted==21.7.0
@@ -64,3 +63,8 @@ typing-extensions==3.10.0.2
 w3lib==1.22.0
 zope.interface==5.4.0
 scrapyd_api
+=======
+scrapy
+pyOpenSSL>22.1.0
+scrapyd_api
+>>>>>>> 3d884d4 (Update requirements.txt to fix 3.10 issues.)
