@@ -20,10 +20,15 @@ def replace_txt(censored,sample):
         i=+1
     return sample
 
+def regex_replace (text,words):
+    regex = re.compile("|".join(words))
+    return re.sub(regex, bcolors.RED +"###########"+ bcolors.ENDC, text)
+
 def main():
   sample_text = "jbfkjbjfkz fdfzefzefze fzef poi mlk nbv fzefzefz effff"
   print(replace_txt(CENSORED_WORDS,sample_text))
-
+  print(regex_replace(sample_text,CENSORED_WORDS))
+  
 if __name__ == "__main__":
   main()  
 
