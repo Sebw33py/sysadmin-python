@@ -1,0 +1,5 @@
+%ERROR: PC-234 -> something weird happen.
+%WARNING: PC-187 -> security issue
+%WARNING: PC-202 -> security issue
+%ERROR: PC-214 -> Script crashed !
+
