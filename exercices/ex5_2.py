@@ -3,7 +3,7 @@ from pprint import pprint
 from requests.auth import HTTPBasicAuth
 
 
-basic = HTTPBasicAuth('go-spereira', "6w(A7wX+M6L'E3^")
+basic = HTTPBasicAuth('go-spereira', "")
 url = "https://elastic-ingest.arkadin.com:9200/srelogs/_search"
 params={"q":"CMDB_Product_Name: ELK","size":"10000","pretty":"true"}
 
