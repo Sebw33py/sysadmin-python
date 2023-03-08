@@ -1,4 +1,5 @@
 import re
+
 pattern = re.compile("^%ERROR")
 
 for i, line in enumerate(open('test.txt')):

@@ -36,3 +36,6 @@ urllib3==1.26.7
 scrapy
 pyOpenSSL>22.1.0
 scrapyd_api
+
+#Elasticsearch
+elasticsearch==8.6.2
